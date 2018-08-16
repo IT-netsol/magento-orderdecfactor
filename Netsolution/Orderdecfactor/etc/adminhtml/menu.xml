@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Netsolution
+ * @package    Netsolution_Orderdecfactor
+ * @author     surabhi
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="netsolution_orderdecfactor::core" title="Netsolutions" module="Netsolution_Orderdecfactor" sortOrder="10" resource="Netsolution_Orderdecfactor::sample"/>
+        <add id="netsolution_orderdecfactor::test" title="Order Details" module="Netsolution_Orderdecfactor" sortOrder="10" parent="netsolution_orderdecfactor::core" action="netsolution_orderdecfactor/items/" resource="Netsolution_Orderdecfactor::items"/>
+    </menu>
+</config>

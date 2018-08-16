@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category   Netsolution
+ * @package    Netsolution_Orderdecfactor
+ * @author     surabhi
+ */
+ -->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">netsolution_orderdecfactor_index_listing.netsolution_orderdecfactor_index_listing_data_source</item>
+            <item name="deps" xsi:type="string">netsolution_orderdecfactor_index_listing.netsolution_orderdecfactor_index_listing_data_source</item>
+        </item>
+        <item name="spinner" xsi:type="string">netsolution_orderdecfactor_index_listing_columns</item>
+       
+    </argument>
+    <dataSource name="netsolution_orderdecfactor_index_listing_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">NetsolutionOrderdecfactorGridDataProvider</argument>
+            <argument name="name" xsi:type="string">netsolution_orderdecfactor_index_listing_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">orderdecfactor_id</argument>
+            <argument name="requestFieldName" xsi:type="string">orderdecfactor_id</argument>
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+					<item name="update_url" xsi:type="url" path="mui/index/render"/>
+					<item name="storageConfig" xsi:type="array">
+						<item name="indexField" xsi:type="string">orderdecfactor_id</item>
+					</item>
+				</item>
+			</argument>
+        </argument>
+    </dataSource>
+    <container name="listing_top">
+        
+    </container>
+    <columns name="netsolution_orderdecfactor_index_listing_columns">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="storageConfig" xsi:type="array">
+                    <item name="provider" xsi:type="string">netsolution_orderdecfactor_index_listing.netsolution_orderdecfactor_index_listing.listing_top.bookmarks</item>
+                    <item name="namespace" xsi:type="string">current</item>
+                </item>
+                <item name="childDefaults" xsi:type="array">
+                    <item name="fieldAction" xsi:type="array">
+                        <item name="provider" xsi:type="string">netsolution_orderdecfactor_index_listing.netsolution_orderdecfactor_index_listing.testing01_index_columns.actions</item>
+                        <item name="target" xsi:type="string">applyAction</item>
+                        <item name="params" xsi:type="array">
+                            <item name="0" xsi:type="string">edit</item>
+                            <item name="1" xsi:type="string">${ $.$data.rowIndex }</item>
+                        </item>
+                    </item>
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="provider" xsi:type="string">netsolution_orderdecfactor_index_listing.netsolution_orderdecfactor_index_listing.listing_top.bookmarks</item>
+                        <item name="root" xsi:type="string">columns.${ $.index }</item>
+                        <item name="namespace" xsi:type="string">current.${ $.storageConfig.root}</item>
+                    </item>
+                </item>
+            </item>
+        </argument>
+      
+        <column name="orderdecfactor_id">
+            <argument name="data" xsi:type="array">
+                <item name="js_config" xsi:type="array">
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/column</item>
+                </item>
+                <item name="config" xsi:type="array">
+                    <item name="indexField" xsi:type="string">orderdecfactor_id</item>
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="label" xsi:type="string" translate="true">ID</item>
+                </item>
+            </argument>
+        </column>
+        <column name="order_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Order Id</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                </item>
+            </argument>
+        </column>
+        <column name="decimal_factor">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Decimal Factor</item>
+                    <item name="sortOrder" xsi:type="number">20</item>
+                </item>
+            </argument>
+        </column>
+         <column name="order_amount">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Amount Paid</item>
+                    <item name="sortOrder" xsi:type="number">30</item>
+                </item>
+            </argument>
+        </column>
+
+         <column name="final_value">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Final Value</item>
+                    <item name="sortOrder" xsi:type="number">40</item>
+                </item>
+            </argument>
+        </column>
+
+    </columns>
+</listing>

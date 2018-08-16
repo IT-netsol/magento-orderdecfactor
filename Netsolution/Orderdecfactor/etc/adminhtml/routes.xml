@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Netsolution
+ * @package    Netsolution_Orderdecfactor
+ * @author     surabhi
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+    <router id="admin">
+        <route id="netsolution_orderdecfactor" frontName="netsolution_orderdecfactor">
+            <module name="Netsolution_Orderdecfactor" />
+        </route>
+    </router>
+</config>
